@@ -1,0 +1,68 @@
+/* Tipografía general */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    /* Esto hace que el main tome todo el espacio disponible */
+}
+body {
+    font-family: "Quicksand", sans-serif;
+    background-color: #fffaf6;
+}
+
+.navbar {
+    background-color: #ffe6e6;
+}
+
+.navbar-brand,
+.nav-link {
+    color: #7a5c61 ;
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    color: #d18592 ;
+}
+
+h1,
+label {
+    color: #7a5c61;
+}
+
+footer {
+    /* Opcional: si quieres que el footer siempre tenga un tamaño fijo */
+    /* height: 60px; */
+    background-color: #ffd9e8;
+    /* tu color pastel */
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.form-control,
+.form-control:focus {
+    border-radius: 10px;
+    border-color: #f3c0c0;
+    box-shadow: none;
+}
+
+.btn-pastel {
+    background-color: #f9d5d5;
+    color: #7a5c61;
+    border: none;
+}
+
+.btn-pastel:hover {
+    background-color: #f4c2c2;
+}

@@ -1,0 +1,113 @@
+/* Tipografía general */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    /* Esto hace que el main tome todo el espacio disponible */
+}
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #fffaf6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado y barra de navegación */
+.bg-pink {
+    background-color: #ffe6f0 ;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #d26a8d !important;
+}
+
+.nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #d26a8d !important;
+    text-decoration: underline;
+}
+
+/* Carrusel */
+.carousel-caption {
+    background-color: rgba(255, 230, 240, 0.7);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Secciones principales */
+main h2 {
+    color: #d26a8d;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+main p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+img.img-fluid {
+    border: 3px solid #ffd9e8;
+}
+
+/* Footer */
+
+
+footer {
+    /* Opcional: si quieres que el footer siempre tenga un tamaño fijo */
+    /* height: 60px; */
+    background-color: #ffd9e8;
+    /* tu color pastel */
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Botones personalizados (opcional para más estilo pastel) */
+.btn-pastel {
+    background-color: #f9d5e5;
+    color: #333;
+    border: none;
+}
+
+.btn-pastel:hover {
+    background-color: #f2aacb;
+    color: white;
+}
+
+/* Responsivo extra */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .carousel-caption {
+        font-size: 0.9rem;
+    }
+}
