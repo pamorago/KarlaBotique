@@ -41,11 +41,10 @@ label {
 }
 
 footer {
-    /* Opcional: si quieres que el footer siempre tenga un tamaño fijo */
+    /* footer siempre tenga un tamaño fijo */
     /* height: 60px; */
     background-color: #ffd9e8;
-    /* tu color pastel */
-    color: #333;
+    color: #ffd9e8;
     text-align: center;
     padding: 20px 0;
 }

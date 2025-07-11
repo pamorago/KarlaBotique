@@ -18,7 +18,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg shadow-sm">
       <div class="container">
-        <a class="navbar-brand" href="index.html">KarlaBotique</a>
+        <a class="navbar-brand" href="../index.html">KarlaBotique</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -30,28 +30,30 @@
         <div class="collapse navbar-collapse" id="menu">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Inicio</a>
+              <a class="nav-link" href="../index.html">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="HTML/historia.html">Historia</a>
+              <a class="nav-link" href="../HTML/historia.html">Historia</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="HTML/servicios.html">Servicios</a>
+              <a class="nav-link" href="../HTML/servicios.html">Servicios</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="HTML/galeria.html">Galería</a>
+              <a class="nav-link" href="../HTML/galeria.html">Galería</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="HTML/multimedia.html">Multimedia</a>
+              <a class="nav-link" href="../HTML/multimedia.html">Multimedia</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="HTML/ubicacion.html">Ubicación</a>
+              <a class="nav-link active" href="../HTML/ubicacion.html"
+                >Ubicación</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="HTML/acerca.html">Acerca</a>
+              <a class="nav-link" href="../HTML/acerca.html">Acerca</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="HTML/contacto.html">Contacto</a>
+              <a class="nav-link" href="../HTML/contacto.html">Contacto</a>
             </li>
           </ul>
         </div>
@@ -61,50 +63,51 @@
     <!-- Mapa -->
     <main class="container py-5">
       <h1 class="mb-4 text-center">¿Dónde estamos?</h1>
-      <div id="map"></div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1168.0908100920074!2d-84.22351103373623!3d10.019045398367568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scr!4v1752216153858!5m2!1ses-419!2scr"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <!-- <div id="map" style="height: 400px; width: 100%"></div>  -->
     </main>
 
     <!-- Footer -->
-    <footer class="text-center mt-5 p-4">
+    <footer class="bg-pink text-black text-center p-4 mt-3">
       <p>&copy; 2025 KarlaBotique - Todos los derechos reservados.</p>
-      <a href="index.html" class="text-decoration-none me-3">Inicio</a>
-      <a href="contacto.html" class="text-decoration-none">Contacto</a>
+      <a href="../index.html" class="text-black">Inicio</a> |
+      <a href="../HTML/contacto.html" class="text-black">Contacto</a>
     </footer>
 
-    <!-- Google Maps API -->
+    <!-- Google Maps Script -->
     <script>
       function initMap() {
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(
-            function (position) {
-              const userLocation = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude,
-              };
-              const map = new google.maps.Map(document.getElementById("map"), {
-                center: userLocation,
-                zoom: 15,
-              });
-              new google.maps.Marker({
-                position: userLocation,
-                map: map,
-                title: "¡Estás aquí!",
-              });
-            },
-            function () {
-              alert("No se pudo obtener tu ubicación.");
-            }
-          );
-        } else {
-          alert("Tu navegador no soporta geolocalización.");
-        }
+        const puebloNuevoCR = {
+          lat: 10.016,
+          lng: -84.211,
+        };
+
+        const map = new google.maps.Map(document.getElementById("map"), {
+          center: puebloNuevoCR,
+          zoom: 16,
+        });
+
+        new google.maps.Marker({
+          position: puebloNuevoCR,
+          map: map,
+          title: "KarlaBotique - Pueblo Nuevo, Alajuela",
+        });
       }
     </script>
     <script
       async
       defer
-      src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY_AQUI&callback=initMap"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3C9...RE1-T3&callback=initMap"
     ></script>
+    <!-- revisar el src ya que creo que eso se debe crear de 0   -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

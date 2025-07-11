@@ -27,12 +27,12 @@ body {
 
 .navbar-brand,
 .nav-link {
-    color: #7a5c61 !important;
+    color: #7a5c61 ;
     font-weight: 600;
 }
 
 .nav-link:hover {
-    color: #d18592 !important;
+    color: #d18592 ;
 }
 
 h1,
@@ -45,11 +45,11 @@ p {
     color: #5a4b4b;
 }
 footer {
-    /* Opcional: si quieres que el footer siempre tenga un tamaño fijo */
+    /*footer siempre tenga un tamaño fijo */
     /* height: 60px; */
     background-color: #ffd9e8;
-    /* tu color pastel */
-    color: #333;
+   
+    color: #ffd9e8;
     text-align: center;
     padding: 20px 0;
 }

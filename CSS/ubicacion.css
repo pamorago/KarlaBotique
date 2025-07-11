@@ -20,6 +20,10 @@ body {
     font-family: "Quicksand", sans-serif;
     background-color: #fffaf6;
 }
+  #map {
+      height: 400px;
+      width: 100%;
+  }
 
 .navbar {
     background-color: #ffe6e6;
@@ -47,11 +51,10 @@ h1 {
 }
 
 footer {
-    /* Opcional: si quieres que el footer siempre tenga un tamaño fijo */
+    /* footer siempre tenga un tamaño fijo */
     /* height: 60px; */
     background-color: #ffd9e8;
-    /* tu color pastel */
-    color: #333;
+    color: #ffd9e8;
     text-align: center;
     padding: 20px 0;
 }
