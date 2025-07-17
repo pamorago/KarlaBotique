@@ -69,6 +69,25 @@ footer a.text-white:hover {
     color: #ffd1dc ;
 }
 
+/* Estilos para el contenido de multimedia (extras que ya tenías o puedes añadir) */
+.media-container video,
+.media-container audio {
+    width: 100%;
+    /* Asegura que los reproductores se adapten al ancho del contenedor */
+    max-width: 800px;
+    /* Opcional: Establece un ancho máximo para reproductores grandes */
+    margin: 0 auto;
+    /* Centra los reproductores si tienen un max-width */
+    display: block;
+    /* Para que margin: auto funcione */
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Puedes añadir más estilos personalizados aquí */
+
 h1 {
     color: #7a5c61;
 }

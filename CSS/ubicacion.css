@@ -1,29 +1,9 @@
 /* Tipografía general */
-html,
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-main {
-    flex: 1;
-    /* Esto hace que el main tome todo el espacio disponible */
-}
 body {
     font-family: "Quicksand", sans-serif;
     background-color: #fffaf6;
 }
-  #map {
-      height: 400px;
-      width: 100%;
-  }
 
 
 .bg-pink {
@@ -47,42 +27,66 @@ body {
 
 }
 
-.navbar-brand,
-.nav-link {
-    color: #7a5c61 !important;
-    font-weight: 600;
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+    color: #fff;
+
 }
 
-.nav-link:hover {
-    color: #d18592 !important;
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #fff;
+    font-weight: bold;
+
 }
 
-h1 {
-    color: #7a5c61;
+footer a.text-white:hover {
+    color: #ffd1dc ;
+
+}
+
+
+.embed-responsive {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.embed-responsive .embed-responsive-item,
+.embed-responsive iframe,
+.embed-responsive embed,
+.embed-responsive object {
+    width: 100%;
+    height: 100%;
+    border: 0;
+
+}
+
+
+.btn-pastel {
+    background-color: #f8c8dc;
+    color: #fff;
+    border-color: #f8c8dc;
+}
+
+.btn-pastel:hover {
+    background-color: #e0a9c8;
+    border-color: #e0a9c8;
 }
 
 #map {
-    height: 400px;
-    width: 100%;
+  
     border-radius: 12px;
     box-shadow: 0 0 10px #f2dcdc;
 }
 
 footer {
-    /* footer siempre tenga un tamaño fijo */
-    /* height: 60px; */
+
     background-color: #ffd9e8;
-    color: #ffd9e8;
+    color: #333;
     text-align: center;
     padding: 20px 0;
 }
 
-.btn-pastel {
-    background-color: #f9d5d5;
-    color: #7a5c61;
-    border: none;
-}
-
-.btn-pastel:hover {
-    background-color: #f4c2c2;
-}

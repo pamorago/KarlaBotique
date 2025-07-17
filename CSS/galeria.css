@@ -64,12 +64,9 @@ footer a.text-white:hover {
 
 }
 
-.btn-pastel {
-    background-color: #f9d5d5;
-    color: #7a5c61;
-    border: none;
-}
-
-.btn-pastel:hover {
-    background-color: #f4c2c2;
+.gallery-img {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+  
 }

@@ -12,7 +12,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap"
     />
-    <link rel="stylesheet" href="CSS/galeria.css" />
+    <link rel="stylesheet" href="../css/galeria.css" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg shadow-sm bg-pink text-black">
@@ -23,6 +23,9 @@
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#menu"
+          aria-controls="menu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -38,7 +41,12 @@
               <a class="nav-link" href="../HTML/servicios.html">Servicios</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../HTML/galeria.html">Galería</a>
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="../HTML/galeria.html"
+                >Galería</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../HTML/multimedia.html">Multimedia</a>
@@ -57,50 +65,49 @@
       </div>
     </nav>
 
-    <!-- Galería -->
     <main class="container py-5">
       <h1 class="mb-4 text-center">Galería de Estilos</h1>
       <div class="row g-4">
         <div class="col-sm-6 col-md-4">
           <img
             src="img/ropa1.jpg"
-            class="img-fluid gallery-img"
-            alt="Ropa  1"
+            class="img-fluid gallery-img rounded shadow-sm"
+            alt="Ropa 1"
           />
         </div>
         <div class="col-sm-6 col-md-4">
           <img
             src="img/ropa2.jpg"
-            class="img-fluid gallery-img"
-            alt="Ropa  2"
+            class="img-fluid gallery-img rounded shadow-sm"
+            alt="Ropa 2"
           />
         </div>
         <div class="col-sm-6 col-md-4">
           <img
             src="img/ropa3.jpg"
-            class="img-fluid gallery-img"
-            alt="Ropa  3"
+            class="img-fluid gallery-img rounded shadow-sm"
+            alt="Ropa 3"
           />
         </div>
         <div class="col-sm-6 col-md-4">
           <img
             src="img/ropa4.jpg"
-            class="img-fluid gallery-img"
-            alt="Ropa  4"
+            class="img-fluid gallery-img rounded shadow-sm"
+            alt="Ropa 4"
           />
         </div>
         <div class="col-sm-6 col-md-4">
           <img
             src="img/ropa5.jpg"
-            class="img-fluid gallery-img"
-            alt="Ropa  5"
+            class="img-fluid gallery-img rounded shadow-sm"
+            alt="Ropa 5"
           />
         </div>
         <div class="col-sm-6 col-md-4">
           <img
             src="img/ropa6.jpg"
-            class="img-fluid gallery-img"
-            alt="Ropa  6"
+            class="img-fluid gallery-img rounded shadow-sm"
+            alt="Ropa 6"
           />
         </div>
       </div>
