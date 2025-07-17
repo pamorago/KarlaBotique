@@ -32,17 +32,17 @@ body {
 .navbar-brand {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #d26a8d !important;
+    color: #d26a8d ;
 }
 
 .nav-link {
-    color: #333 !important;
+    color: #333 ;
     font-weight: 500;
     transition: all 0.3s ease-in-out;
 }
 
 .nav-link:hover {
-    color: #d26a8d !important;
+    color: #d26a8d ;
     text-decoration: underline;
 }
 
@@ -79,16 +79,16 @@ img.img-fluid {
 
 
 footer {
-    /* Opcional: si quieres que el footer siempre tenga un tamaño fijo */
+    /*  footer siempre tenga un tamaño fijo */
     /* height: 60px; */
     background-color: #ffd9e8;
-    /* tu color pastel */
-    color: #333;
+   
+    color: #eeafde;
     text-align: center;
     padding: 20px 0;
 }
 
-/* Botones personalizados (opcional para más estilo pastel) */
+/* Botones personalizados  */
 .btn-pastel {
     background-color: #f9d5e5;
     color: #333;
