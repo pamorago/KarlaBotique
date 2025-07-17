@@ -21,41 +21,47 @@ body {
     background-color: #fffaf6;
 }
 
-.navbar {
-    background-color: #ffe6e6;
+/* Estilos personalizados para Galería - KarlaBotique */
+
+.bg-pink {
+    background-color: #ffe6f0;
+    
 }
 
-.navbar-brand,
-.nav-link {
-    color: #7a5c61 ;
-    font-weight: 600;
+/* Estilo para los botones con la clase btn-pastel */
+.btn-pastel {
+    background-color: #f165b4;
+    color: #fff;
+    border-color: #f8c8dc;
+
 }
 
-.nav-link:hover {
-    color: #d18592 ;
+.btn-pastel:hover {
+    background-color: #f165b4;
+    border-color: #e0a9c8;
 }
 
-h1 {
-    color: #7a5c61;
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(247, 190, 236, 0.9);
+    transition: color 0.3s ease-in-out;
 }
 
-.gallery-img {
-    border-radius: 12px;
-    transition: transform 0.3s ease;
-    box-shadow: 0 0 10px #f3d6d6;
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+    color: #fff;
+    
 }
 
-.gallery-img:hover {
-    transform: scale(1.05);
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #fff;
+    font-weight: bold;
+
 }
 
-footer {
-    /* footer siempre tenga un tamaño fijo */
-    /* height: 60px; */
-    background-color: #ffd9e8;
-    color: #ffd9e8;
-    text-align: center;
-    padding: 20px 0;
+
+footer a.text-white:hover {
+    color: #080808 ;
+
 }
 
 .btn-pastel {

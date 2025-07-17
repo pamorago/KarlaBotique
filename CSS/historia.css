@@ -14,15 +14,40 @@ body {
 
 main {
     flex: 1;
-    /* Esto hace que el main tome todo el espacio disponible */
-}
-body {
-    font-family: "Quicksand", sans-serif;
-    background-color: #fffaf6;
+   
 }
 
-.navbar {
-    background-color: #ffe6e6;
+
+.bg-pink {
+    background-color: #ffe6f0;
+   
+}
+
+/* Estilo para los botones con la clase btn-pastel */
+.btn-pastel {
+    background-color: #f165b4;
+    
+    color: #fff;
+  
+    border-color: #f8c8dc;
+  
+}
+
+.btn-pastel:hover {
+    background-color: #e0a9c8;
+    
+    border-color: #e0a9c8;
+}
+
+
+.navbar-brand{
+            padding-top: var(--bs-navbar-brand-padding-y);
+            padding-bottom: var(--bs-navbar-brand-padding-y);
+            margin-right: var(--bs-navbar-brand-margin-end);
+            font-size: var(--bs-navbar-brand-font-size);
+            color: rgb(194, 33, 103,1);
+            text-decoration: none;
+            white-space: nowrap;
 }
 
 .navbar-brand,
