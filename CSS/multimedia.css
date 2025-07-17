@@ -21,19 +21,72 @@ body {
     background-color: #fffaf6;
 }
 
-.navbar {
-    background-color: #ffe6e6;
+
+/* Define el color de fondo para la clase bg-pink */
+.bg-pink {
+    background-color: #ffe6f0;
+  
 }
 
-.navbar-brand,
-.nav-link {
-    color: #7a5c61 !important;
-    font-weight: 600;
+/* Estilo para los enlaces de la navbar */
+/* navbar-dark ya hace que el texto sea claro, pero puedes refinarlo o añadir hover */
+.navbar-brand {
+    padding-top: var(--bs-navbar-brand-padding-y);
+    padding-bottom: var(--bs-navbar-brand-padding-y);
+    margin-right: var(--bs-navbar-brand-margin-end);
+    font-size: var(--bs-navbar-brand-font-size);
+    color: #333;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(6, 6, 6, 0.9);
+   
+    transition: color 0.3s ease-in-out;
+   
 }
 
-.nav-link:hover {
-    color: #d18592 !important;
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+    color: #fc97d3;
+
 }
+
+/* Estilo para el enlace activo en la navbar */
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #fff;
+    font-weight: bold;
+    
+}
+
+/* Estilos para el footer */
+footer {
+    /* El background-color y text-color se manejan con clases de Bootstrap en el HTML (bg-pink, text-white) */
+    /* Aquí puedes añadir otros estilos si los necesitas para el footer que no sean de color */
+}
+
+footer a.text-white:hover {
+    color: #ffd1dc ;
+}
+
+/* Estilos para el contenido de multimedia (extras que ya tenías o puedes añadir) */
+.media-container video,
+.media-container audio {
+    width: 100%;
+    /* Asegura que los reproductores se adapten al ancho del contenedor */
+    max-width: 800px;
+    /* Opcional: Establece un ancho máximo para reproductores grandes */
+    margin: 0 auto;
+    /* Centra los reproductores si tienen un max-width */
+    display: block;
+    /* Para que margin: auto funcione */
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Puedes añadir más estilos personalizados aquí */
 
 h1 {
     color: #7a5c61;
@@ -54,11 +107,8 @@ audio {
 }
 
 footer {
-    /* footer siempre tenga un tamaño fijo */
-    
     background-color: #ffd9e8;
-   
-    color: #ffd9e8;
+    color: #333;
     text-align: center;
     padding: 20px 0;
 }
