@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -71,13 +71,11 @@
         class="embed-responsive embed-responsive-16by9 rounded shadow-sm"
         style="height: 450px"
       >
-        <iframe
-          class="embed-responsive-item w-100 h-100"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15714.28822987153!2d-84.97893902341571!3d10.22271840893084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f951e7a5c8b5e9f%3A0x6b8d9e7c5b6c7a8d!2sTambor%2C%20Alajuela%20Province%2C%20Costa%20Rica!5e0!3m2!1sen!2sus!4v1720898711234!5m2!1sen!2sus"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+        <div
+          id="map"
+          class="rounded shadow-sm"
+          style="height: 450px; width: 100%"
+        ></div>
       </div>
     </main>
 
@@ -92,5 +90,30 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function initMap() {
+        const salonLocation = { lat: 10.283333, lng: -84.266667 }; // Pueblo Nuevo, Alajuela
+
+        const map = new google.maps.Map(document.getElementById("map"), {
+          center: salonLocation,
+          zoom: 15,
+          mapTypeId: "roadmap",
+        });
+
+        const marker = new google.maps.Marker({
+          position: salonLocation,
+          map: map,
+          title: "KarlaBotique - Pueblo Nuevo",
+          animation: google.maps.Animation.DROP,
+        });
+      }
+    </script>
+
+    <!-- Carga de la API de Google Maps NOOO FUNCIONA LA MIERDA ESTA -->
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuPRQJnBpcI-zNcFZa9EIGBtCdsrk7Kx8&callback=initMap"
+    ></script>
   </body>
 </html>
