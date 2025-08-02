@@ -1,0 +1,47 @@
+[
+  {
+    "nombre": "Blusa",
+    "url": "../img/blusa.jpg",
+    "alt": "Blusa"
+  },
+  {
+    "nombre": "Camiseta",
+    "url": "../img/camiseta.jpg",
+    "alt": "Camiseta"
+  },
+  {
+    "nombre": "Camiseta Manga tres cuartos",
+    "url": "../img/camisetaManga.jpg",
+    "alt": "CamisetaManga"
+  },
+  {
+    "nombre": "Vestido Casual",
+    "url": "../img/vestidoCasual.jpg",
+    "alt": "VestidoCasual"
+  },
+  {
+    "nombre": "Vestido Cuadros",
+    "url": "../img/vestidoCuadros.jpg",
+    "alt": "VestidoCuadros"
+  },
+  {
+    "nombre": "Vestido Estampado",
+    "url": "../img/vestidoEstampado.jpg",
+    "alt": "VestidoEstampado"
+  },
+  {
+    "nombre": "Vestido Formal",
+    "url": "../img/vestidoFormal.jpg",
+    "alt": "VestidoFormal"
+  },
+  {
+    "nombre": "Vestido Musgo",
+    "url": "../img/vestidoMusgo.jpg",
+    "alt": "VestidoMusgo"
+  },
+  {
+    "nombre": "Vestido Verde ",
+    "url": "../img/vestidoVerde.jpg",
+    "alt": "VestidoVerde"
+  }
+]
