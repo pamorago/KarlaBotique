@@ -1,0 +1,20 @@
+[
+  {
+    "nombre": "Instagram",
+    "url": "https://instagram.com/tu_pagina",
+    "icono": "img/instagram.png",
+    "alt": "Instagram"
+  },
+  {
+    "nombre": "Facebook",
+    "url": "https://facebook.com/tu_pagina",
+    "icono": "img/facebook.png",
+    "alt": "Facebook"
+  },
+  {
+    "nombre": "TikTok",
+    "url": "https://tiktok.com/@tu_pagina",
+    "icono": "img/tik-tok.png",
+    "alt": "TikTok"
+  }
+]
