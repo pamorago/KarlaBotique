@@ -1,0 +1,17 @@
+ [
+  {
+    "nombre": "Paula Mora",
+    "url": "../img/Paula.jpeg",
+    "alt": "Paula"
+  },
+  {
+    "nombre": "Karla Mairena",
+    "url": "../img/Karla.jpeg",
+    "alt": "Karla"
+  },
+  {
+    "nombre": "Jazmin Esquivel",
+    "url": "../img/Jazmin.jpeg",
+    "alt": "Jazmin"
+  }
+ ]

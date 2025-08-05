@@ -1,0 +1,119 @@
+/* Tipografía y estructura */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Quicksand", sans-serif;
+    background-color: #fffaf6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/* Encabezado */
+h1 {
+    color: #d25e98;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Tarjetas de autores */
+.card {
+    border: 1px solid #ffe6ea;
+    background-color: #fff0f6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    padding: 1.2rem;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.card h4 {
+    color: #090909;
+    margin-bottom: 0.6rem;
+    font-size: 1.3rem;
+}
+
+.card p {
+    color: #704f5f;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.p3{
+        color: #e8899a;
+}
+
+/* Botón pastel */
+.btn-pastel {
+    background-color: #f165b4;
+    color: #fff;
+    border-color: #f8c8dc;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-pastel:hover {
+    background-color: #e0a9c8;
+    border-color: #e0a9c8;
+}
+
+/* Barra de navegación */
+.bg-pink {
+    background-color: #ffe6f0;
+}
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #d26a8d !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(2, 2, 2, 0.9);
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+    color: #000000;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #fff;
+    font-weight: bold;
+}
+.text-black {
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
+}
+.text-center {
+    text-align: center !important;
+    color: #ea6c82;
+}
+/* Footer */
+footer {
+    background-color: #ffe6f0;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #804e75;
+}
+
+footer a:hover {
+    color: #ffd1dc;
+}
