@@ -74,7 +74,10 @@ main p {
 img.img-fluid {
     border: 3px solid #ffd9e8;
 }
-
+.img-fluid {
+    max-width: 300px;
+    height: auto;
+}
 /* Footer */
 
 
