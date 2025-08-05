@@ -77,6 +77,15 @@ body {
     transform: translateY(-10px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
+.text-pink {
+    color: #d25e98;
+}
+
+#modalDetalle .modal-content {
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
 
 footer a.text-white:hover {
     color: #080808 ;

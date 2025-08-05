@@ -15,7 +15,9 @@ fetch("JSON/imagenes.json")
       });
     }
   });
-  function cargarGaleria(rutaJson, idGaleria) {
+
+  
+function cargarGaleria(rutaJson, idGaleria) {
   fetch(rutaJson)
     .then((response) => response.json())
     .then((data) => {
@@ -29,16 +31,33 @@ fetch("JSON/imagenes.json")
             <div class="card shadow-sm">
               <img src="${prenda.url}" class="card-img-top" alt="${prenda.alt}">
               <div class="card-body text-center">
-                <h5 class="card-title">${prenda.nombre}</h5>
+                <div class="d-flex justify-content-between align-items-center">
+                  <h5 class="card-title mb-0">${prenda.nombre}</h5>
+                  <button class="btn btn-pastel btn-sm" onclick="mostrarDetalle('${prenda.id}')">Ver detalle</button>
+                </div>
               </div>
             </div>
           `;
-
           galeria.appendChild(col);
         });
+
+      
+        window.prendasData = data;
       }
     })
     .catch((error) => console.error("Error al cargar la galería:", error));
+}
+function mostrarDetalle(idPrenda) {
+  const prenda = window.prendasData.find(p => p.id === idPrenda);
+  if (prenda) {
+    document.getElementById("detalleImagen").src = prenda.url;
+    document.getElementById("detalleImagen").alt = prenda.alt;
+    document.getElementById("detalleNombre").textContent = prenda.nombre;
+    document.getElementById("detalleDescripcion").textContent = prenda.descripcion;
+
+    const modal = new bootstrap.Modal(document.getElementById("modalDetalle"));
+    modal.show();
+  }
 }
 
 

@@ -37,11 +37,25 @@ h1 {
     transform: scale(1.03);
 }
 
+
 .card img {
+    width: 100%;
+    /* Ocupa todo el ancho del contenedor */
+    height: auto;
+    /* Mantiene proporción original */
+    max-height: 800px;
+    /* Limita la altura para evitar que sobresalga */
+    object-fit: cover;
+    /* Recorta sin distorsionar */
     border-radius: 8px;
     margin-bottom: 1rem;
-    max-height: 200px;
+}
+.card img {
+    aspect-ratio: 4 / 3;
+    width: 100%;
     object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
 }
 
 .card h4 {

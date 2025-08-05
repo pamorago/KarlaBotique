@@ -72,6 +72,35 @@
         <a href="contacto.html" class="btn btn-pastel">Contáctanos</a>
       </div>
     </main>
+    <!-- Modal para detalles -->
+    <div
+      class="modal fade"
+      id="modalDetalle"
+      tabindex="-1"
+      aria-labelledby="modalDetalleLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-light">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalDetalleLabel">
+              Detalles de la prenda
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <div class="modal-body text-center">
+            <img id="detalleImagen" class="img-fluid rounded mb-3" alt="" />
+            <h5 id="detalleNombre" class="text-pink mb-2"></h5>
+            <p id="detalleDescripcion" class="text-muted"></p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <footer class="text-center mt-5 p-4 bg-pink text-black">
       <p>&copy; 2025 Karla Botique - Todos los derechos reservados.</p>

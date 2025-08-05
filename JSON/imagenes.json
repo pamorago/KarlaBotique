@@ -1,47 +1,66 @@
 [
   {
+     "id": "01",
     "nombre": "Blusa",
     "url": "../img/blusa.jpg",
-    "alt": "Blusa"
+    "alt": "Blusa",
+    "descripcion": "Blusa con estilo de flores blancas y amarilas con botones transparentes, corte al ombligo. "
   },
   {
+
+    "id": "02",
     "nombre": "Camiseta",
     "url": "../img/camiseta.jpg",
-    "alt": "Camiseta"
+    "alt": "Camiseta",
+    "descripcion": "Camiseta formal, a medida de nuestros clientes."
   },
   {
+    "id": "03",
     "nombre": "Camiseta Manga tres cuartos",
     "url": "../img/camisetaManga.jpg",
-    "alt": "CamisetaManga"
+    "alt": "CamisetaManga",
+    "descripcion": "Camiseta manga tres cuartos con botones. "
   },
   {
+     "id": "04",
     "nombre": "Vestido Casual",
     "url": "../img/vestidoCasual.jpg",
-    "alt": "VestidoCasual"
+    "alt": "VestidoCasual",
+    "descripcion": "Vestido casual con hojas de blancas."
   },
   {
+    "id": "05",
     "nombre": "Vestido Cuadros",
     "url": "../img/vestidoCuadros.jpg",
-    "alt": "VestidoCuadros"
+    "alt": "VestidoCuadros",
+    "descripcion": "Vestido con cuadros, con la parte superior ajustada en corte tipo A."
   },
   {
+    "id": "06",
     "nombre": "Vestido Estampado",
     "url": "../img/vestidoEstampado.jpg",
-    "alt": "VestidoEstampado"
+    "alt": "VestidoEstampado",
+    "descripcion": "Vestido estampado, a gusto del cliente que con cuello V."
   },
   {
+    "id": "07",
     "nombre": "Vestido Formal",
     "url": "../img/vestidoFormal.jpg",
-    "alt": "VestidoFormal"
+    "alt": "VestidoFormal",
+    "descripcion": "Vestido formal, con corte V y con vuelitos ajustado con diseño de flores."
   },
   {
+    "id": "08",
     "nombre": "Vestido Musgo",
     "url": "../img/vestidoMusgo.jpg",
-    "alt": "VestidoMusgo"
+    "alt": "VestidoMusgo",
+    "descripcion": "Vestido color verde musgo, con pinzas con cuello redondo."
   },
   {
+    "id": "09",
     "nombre": "Vestido Verde ",
     "url": "../img/vestidoVerde.jpg",
-    "alt": "VestidoVerde"
+    "alt": "VestidoVerde",
+    "descripcion": "Vestido color verde , con pinzas con cuello redondo y alto con una tira de un lazo."
   }
 ]
