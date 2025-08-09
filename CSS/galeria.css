@@ -86,6 +86,33 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     align-items: center;
 }
+.carrito-flotante {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    width: 250px;
+    background: #fffafc;
+    border: 2px solid #f3cce3;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+}
+
+.carrito-flotante.activo {
+    display: block;
+}
+
+.btn-pastel {
+    background-color: #f3cce3;
+    color: #5a3e57;
+    border: none;
+}
+
+.btn-pastel:hover {
+    background-color: #eab6d2;
+}
 
 footer a.text-white:hover {
     color: #080808 ;
