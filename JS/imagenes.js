@@ -59,6 +59,9 @@ function mostrarDetalle(idPrenda) {
     modal.show();
   }
 }
+
+//LA VARA DEL CARRITO 
+
 document.addEventListener("DOMContentLoaded", function () {
   let total = 0;
   const carrito = {}; // clave: id de prenda, valor: objeto con cantidad y datos
