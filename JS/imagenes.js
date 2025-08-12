@@ -21,6 +21,7 @@ function cargarGaleria(rutaJson, idGaleria) {
   fetch(rutaJson)
     .then((response) => response.json())
     .then((data) => {
+      window.prendasData = data; 
       const galeria = document.getElementById(idGaleria);
       if (galeria) {
         data.forEach((prenda) => {
@@ -60,49 +61,22 @@ function mostrarDetalle(idPrenda) {
   }
 }
 
-//LA VARA DEL CARRITO 
 
-document.addEventListener("DOMContentLoaded", function () {
+
+function inicializarCarrito({ galeriaId, listaId, totalId, mensajeId, btnEnviarId, prendas }) {
+  const galeria = document.getElementById(galeriaId);
+  const listaPedido = document.getElementById(listaId);
+  const totalPedido = document.getElementById(totalId);
+  const mensaje = document.getElementById(mensajeId);
+  const btnEnviar = document.getElementById(btnEnviarId);
+
+  const carrito = {};
   let total = 0;
-  const carrito = {}; // clave: id de prenda, valor: objeto con cantidad y datos
-  const listaPedido = document.getElementById("listaPedido");
-  const totalPedido = document.getElementById("totalPedido");
 
-  // Mostrar/ocultar carrito
-  document.getElementById("pestana-carrito").addEventListener("click", () => {
-    document.getElementById("carrito").classList.toggle("activo");
-  });
-
-  // Cargar galería desde JSON
-  fetch("JSON/imagenes.json")
-    .then((response) => response.json())
-    .then((data) => {
-      window.prendasData = data;
-      const galeria = document.getElementById("galeria-ropa");
-
-      data.forEach((prenda) => {
-        const col = document.createElement("div");
-        col.className = "col-md-4 col-sm-6";
-
-        col.innerHTML = `
-          <div class="card shadow-sm cardPrenda">
-            <img src="${prenda.url}" class="card-img-top" alt="${prenda.alt}">
-            <div class="card-body text-center">
-              <h5 class="card-title mb-1">${prenda.nombre}</h5>
-              <p class="text-muted">₡${prenda.precio}</p>
-              <button class="btn btn-pastel btn-sm btnAgregar" data-id="${prenda.id}">Agregar</button>
-            </div>
-          </div>
-        `;
-        galeria.appendChild(col);
-      });
-    });
-
-  // Agregar prenda al carrito
-  document.getElementById("galeria-ropa").addEventListener("click", function (e) {
+  galeria.addEventListener("click", function (e) {
     if (e.target.classList.contains("btnAgregar")) {
       const id = e.target.getAttribute("data-id");
-      const prenda = window.prendasData.find(p => p.id === id);
+      const prenda = prendas.find(p => p.id === id);
 
       if (prenda) {
         if (carrito[id]) {
@@ -121,7 +95,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Eliminar una unidad
   listaPedido.addEventListener("click", function (e) {
     if (e.target.classList.contains("btnEliminar")) {
       const id = e.target.getAttribute("data-id");
@@ -135,8 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Enviar pedido
-  document.getElementById("btnEnviarPedido").addEventListener("click", () => {
+  btnEnviar.addEventListener("click", () => {
     if (total === 0) {
       alert("No has agregado productos");
       return;
@@ -147,7 +119,6 @@ document.addEventListener("DOMContentLoaded", function () {
     actualizarCarrito();
   });
 
-  // Actualiza el DOM del carrito
   function actualizarCarrito() {
     listaPedido.innerHTML = "";
     total = 0;
@@ -168,12 +139,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function mostrarMensajeAgregado() {
-    const mensaje = document.getElementById("mensajeAgregado");
     mensaje.classList.remove("d-none");
     mensaje.style.display = "none";
     $(mensaje).fadeIn().delay(800).fadeOut();
   }
-});
+}
+
 
 
 

@@ -125,3 +125,68 @@ footer a.text-white:hover {
     height: 300px;
   
 }
+/* Móviles pequeños (hasta 576px) */
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+        padding: 0.3rem;
+    }
+
+    #galeria-dinamica .card {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    #pestana-carrito {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        z-index: 1000;
+    }
+
+    .carrito-flotante {
+        width: 90vw;
+        right: 5vw;
+        bottom: 70px;
+        font-size: 0.9em;
+    }
+
+    #modalDetalle .modal-dialog {
+        max-width: 90%;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 576px) {
+    body {
+        font-size: 14px;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .carrito-flotante {
+        width: 90vw;
+        right: 5vw;
+        bottom: 10px;
+        font-size: 0.9em;
+    }
+
+    .card {
+        margin-bottom: 1rem;
+    }
+
+    #pestana-carrito {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+}

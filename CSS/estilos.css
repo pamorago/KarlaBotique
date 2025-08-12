@@ -104,6 +104,38 @@ footer {
 }
 
 /* Responsivo extra */
+/*Móviles pequeños (hasta 576px) */
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
+        padding: 0.4rem;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.8rem;
+    }
+
+    main .row {
+        flex-direction: column;
+    }
+
+    aside img {
+        margin-top: 1rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
 @media (max-width: 768px) {
     .navbar-nav .nav-link {
         text-align: center;
@@ -112,5 +144,71 @@ footer {
 
     .carousel-caption {
         font-size: 0.9rem;
+    }
+}
+/* Tablets (577px a 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.4rem;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+/*  Laptops (769px a 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .navbar-brand {
+        font-size: 1.6rem;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.4rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1.1rem;
+    }
+
+    .nav-link {
+        font-size: 1.1rem;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+}
+/*PCs grandes (más de 1024px) */
+@media (min-width: 1025px) {
+    .navbar-brand {
+        font-size: 1.8rem;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.6rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1.2rem;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+    }
+
+    footer {
+        font-size: 1.1rem;
     }
 }

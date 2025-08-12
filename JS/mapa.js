@@ -1,10 +1,10 @@
 
-  function initMap() {
+function initMap() {
   const lugarFijo = { lat: 10.020843, lng: -84.223928  }; 
 
   // Mapa centrado inicialmente en el lugar fijo
   const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 16,
+    zoom: 14,
     center: lugarFijo,
   });
 
@@ -12,7 +12,7 @@
   const marcadorLugarFijo = new google.maps.Marker({
     position: lugarFijo,
     map: map,
-    title: "Pueblo nuevo",
+    title: "Pueblo Nuevo, Alajuela",
     icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png", // marcador rojo para el lugar fijo
   });
 
@@ -47,3 +47,5 @@
     alert("Tu navegador no soporta geolocalización.");
   }
 }
+
+
