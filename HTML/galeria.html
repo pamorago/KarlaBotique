@@ -137,17 +137,5 @@
     <script>
       cargarGaleria("../JSON/imagenes.json", "galeria-dinamica");
     </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        inicializarCarrito({
-          galeriaId: "galeria-dinamica",
-          listaId: "listaPedido",
-          totalId: "totalPedido",
-          mensajeId: "mensajeAgregado",
-          btnEnviarId: "btnEnviarPedido",
-          prendas: window.prendasData, // Asegúrate de que esté disponible
-        });
-      });
-    </script>
   </body>
 </html>

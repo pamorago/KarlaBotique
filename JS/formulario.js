@@ -17,4 +17,7 @@
         const form = document.getElementById("formContacto");
         form.addEventListener("submit", manejarFormulario);
       });
+      //Agregar que llegue al correo del cliente mediante un forms para que sea mas sencillo 
+      //Validaciones de numeros correo nombre . 
+      
  
