@@ -4,7 +4,7 @@ function initMap() {
 
   // Mapa centrado inicialmente en el lugar fijo
   const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 14,
+    zoom: 16,
     center: lugarFijo,
   });
 

@@ -1,23 +1,44 @@
- function manejarFormulario(e) {
-        e.preventDefault();
+form.addEventListener("submit", function (e) {
+  const nombre = document.getElementById("nombre").value.trim();
+  const correo = document.getElementById("correo").value.trim();
+  const mensaje = document.getElementById("mensaje").value.trim();
 
-        const nombre = document.getElementById("nombre").value;
-        const correo = document.getElementById("correo").value;
-        const mensaje = document.getElementById("mensaje").value;
+  const regexNombre = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
+  const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        if (nombre && correo && mensaje) {
-          alert(`Gracias, ${nombre}! Tu mensaje ha sido enviado `);
-          e.target.reset();
-        } else {
-          alert("Por favor completa todos los campos.");
-        }
-      }
+  if (!regexNombre.test(nombre)) {
+    e.preventDefault();
+    mostrarAlerta("Nombre inválido. Solo letras y espacios.");
+    return;
+  }
 
-      document.addEventListener("DOMContentLoaded", function () {
-        const form = document.getElementById("formContacto");
-        form.addEventListener("submit", manejarFormulario);
-      });
-      //Agregar que llegue al correo del cliente mediante un forms para que sea mas sencillo 
-      //Validaciones de numeros correo nombre . 
-      
- 
+  if (!regexCorreo.test(correo)) {
+    e.preventDefault();
+    mostrarAlerta("Correo electrónico inválido.");
+    return;
+  }
+
+  if (mensaje.length < 10) {
+    e.preventDefault();
+    mostrarAlerta("El mensaje debe tener al menos 10 caracteres.");
+    return;
+  }
+
+  // ✅ Si todo está bien, limpiar campos
+  e.preventDefault(); // ← evita que se recargue la página
+  mostrarAlerta(`Gracias, ${nombre}! Tu mensaje ha sido enviado.`, true);
+  form.reset(); // ← limpia los campos
+});
+
+  function mostrarAlerta(texto, exito = false) {
+    const contenedor = document.getElementById("mensajeAlerta");
+    contenedor.innerHTML = "";
+
+    const alerta = document.createElement("div");
+    alerta.className = `alerta p-3 mt-3 rounded text-center fw-bold ${exito ? "bg-success text-white" : "bg-danger text-white"}`;
+    alerta.textContent = texto;
+
+    contenedor.appendChild(alerta);
+
+    setTimeout(() => alerta.remove(), 4000);
+  }
