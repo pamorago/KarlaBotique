@@ -18,6 +18,19 @@
     <nav class="navbar navbar-expand-lg shadow-sm bg-pink navbar-dark">
       <div class="container">
         <a class="navbar-brand" href="../index.html">KarlaBotique</a>
+        <!-- Botón del carrito -->
+        <button
+          id="pestana-carrito"
+          class="btn btn-pastel position-relative me-3"
+        >
+          🛍️ Carrito
+          <span
+            id="contador-carrito"
+            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+          >
+            0
+          </span>
+        </button>
         <button
           class="navbar-toggler"
           type="button"
@@ -65,6 +78,37 @@
       </div>
     </nav>
 
+    <!-- Panel del carrito -->
+    <div id="carrito-flotante" class="carrito-flotante oculto">
+      <h5 class="mb-3">🛍️ Tu Carrito</h5>
+      <div class="table-responsive mb-3">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Descripción</th>
+              <th>Precio</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="items-carrito"></tbody>
+          <tfoot>
+            <tr>
+              <td class="fw-bold text-end">Total:</td>
+              <td colspan="2" id="total-carrito" class="fw-bold">₡0</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <div class="d-grid gap-2">
+        <button id="confirmar-compra" class="btn btn-pastel">
+          Confirmar Compra
+        </button>
+        <button id="vaciar-carrito" class="btn btn-pastel">
+          Vaciar Carrito
+        </button>
+      </div>
+    </div>
+
     <main class="container py-5">
       <div id="galeria-dinamica" class="row g-4"></div>
 
@@ -102,6 +146,98 @@
       </div>
     </div>
 
+    <!-- Modal para Contacto -->
+    <div
+      class="modal fade"
+      id="modalContacto"
+      tabindex="-1"
+      aria-labelledby="modalContactoLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-light">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalContactoLabel">
+              Información de Contacto
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="formularioContacto" class="needs-validation" novalidate>
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre completo</label>
+                <input type="text" class="form-control" id="nombre" required />
+                <div class="invalid-feedback">Por favor ingrese su nombre.</div>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" required />
+                <div class="invalid-feedback">
+                  Por favor ingrese un correo electrónico válido.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="telefono" required />
+                <div class="invalid-feedback">
+                  Por favor ingrese su número de teléfono.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="direccion" class="form-label"
+                  >Dirección de envío</label
+                >
+                <textarea
+                  class="form-control"
+                  id="direccion"
+                  rows="3"
+                  required
+                ></textarea>
+                <div class="invalid-feedback">
+                  Por favor ingrese su dirección de envío.
+                </div>
+              </div>
+              <div class="mb-3">
+                <h6>Resumen de la compra</h6>
+                <div id="resumen-compra" class="table-responsive">
+                  <table class="table table-sm">
+                    <tbody id="resumen-items"></tbody>
+                    <tfoot>
+                      <tr>
+                        <td class="text-end fw-bold">Total a pagar:</td>
+                        <td id="resumen-total" class="fw-bold"></td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancelar
+            </button>
+            <button
+              type="button"
+              class="btn btn-pastel"
+              onclick="enviarFormulario()"
+            >
+              Confirmar Compra
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer class="text-center mt-5 p-4 bg-pink text-black">
       <p>&copy; 2025 Karla Botique - Todos los derechos reservados.</p>
       <a href="../index.html" class="text-decoration-none text-black me-3"
@@ -114,6 +250,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+    <script src="../JS/carrito.js"></script>
     <script src="../JS/imagenes.js"></script>
 
     <script>
