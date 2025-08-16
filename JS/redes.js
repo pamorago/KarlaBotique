@@ -1,5 +1,5 @@
 // Script para cargar iconos de redes sociales en el footer desde JSON/redes.json
-fetch("JSON/redes.json")
+fetch("../JSON/redes.json")
   .then((response) => response.json())
   .then((data) => {
     // Footer
