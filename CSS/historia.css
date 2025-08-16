@@ -1,54 +1,4 @@
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
 
-main {
-  flex: 1;
-}
-
-.bg-pink {
-  background-color: #ffe6f0;
-}
-
-/* Estilo para los botones con la clase btn-pastel */
-.btn-pastel {
-  background-color: #f165b4;
-
-  color: #fff;
-
-  border-color: #f8c8dc;
-}
-
-.btn-pastel:hover {
-  background-color: #e0a9c8;
-
-  border-color: #e0a9c8;
-}
-
-.navbar-brand {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #d26a8d !important;
-}
-
-.nav-link {
-  color: #333 !important;
-  font-weight: 500;
-  transition: all 0.3s ease-in-out;
-}
-
-.nav-link:hover {
-  color: #d26a8d !important;
-  text-decoration: underline;
-}
 
 /* Media query para dispositivos móviles */
 @media (max-width: 768px) {
@@ -67,17 +17,3 @@ main {
   }
 }
 
-/* Asegura que los enlaces del footer también sean blancos y sin subrayado */
-footer a.text-decoration-none {
-  color: inherit;
-}
-
-footer a.text-decoration-none:hover {
-  color: #ffd1dc;
-}
-footer {
-  background-color: #ffd9e8;
-  color: #333;
-  text-align: center;
-  padding: 20px 0;
-}

@@ -12,20 +12,19 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap"
     />
+    <link rel="stylesheet" href="../css/estilos.css" />
     <link rel="stylesheet" href="../css/contacto.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg shadow-sm bg-pink navbar-dark">
-      <div class="container">
-        <a class="navbar-brand" href="../index.html">KarlaBotique</a>
+    <!-- Header con navegación -->
+    <header class="bg-pink text-white">
+      <nav class="navbar navbar-expand-lg navbar-dark container">
+        <a class="navbar-brand" href="../index.html">Karla Botique</a>
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#menu"
-          aria-controls="menu"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -53,18 +52,19 @@
               <a class="nav-link" href="../HTML/acerca.html">Acerca</a>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                href="../HTML/contacto.html"
-                >Contacto</a
-              >
+              <a class="nav-link" href="../HTML/contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../HTML/autor.html">Autor</a>
+            </li>
+
+            <li class="nav-item d-flex align-items-center">
+              <span id="navbar-redes" class="ms-2"></span>
             </li>
           </ul>
         </div>
-      </div>
-    </nav>
-
+      </nav>
+    </header>
     <main class="container py-5">
       <h1 class="mb-4 text-center">Contáctanos</h1>
       <div class="row justify-content-center">
@@ -114,19 +114,20 @@
         </div>
       </div>
     </main>
-
-    <footer class="text-center mt-5 p-4 bg-pink text-black">
+    <!-- Footer -->
+    <footer class="bg-pink text-black text-center p-4 mt-3">
       <p>&copy; 2025 KarlaBotique - Todos los derechos reservados.</p>
-      <a href="../index.html" class="text-decoration-none text-black me-3"
-        >Inicio</a
-      >
-      <a href="../HTML/acerca.html" class="text-decoration-none text-black"
-        >Acerca</a
-      >
+      <div class="m-3">
+        <span>Síguenos:</span>
+        <span id="footer-redes"></span>
+      </div>
+      <a href="../index.html" class="text-black">Inicio</a> |
+      <a href="../contacto.html" class="text-black">Contacto</a>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/formulario.js"></script>
+    <script src="../Js/formulario.js"></script>
+    <script src="../JS/redes.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const form = document.getElementById("formContacto");

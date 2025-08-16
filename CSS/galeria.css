@@ -1,60 +1,4 @@
-/* Tipografía general */
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-main {
-  flex: 1;
-  /* Esto hace que el main tome todo el espacio disponible */
-}
-body {
-  font-family: "Quicksand", sans-serif;
-  background-color: #fffaf6;
-}
-
-/* Estilos personalizados para Galería - KarlaBotique */
-
-.bg-pink {
-  background-color: #ffe6f0;
-}
-
-/* Estilo para los botones con la clase btn-pastel */
-.btn-pastel {
-  background-color: #f165b4;
-  color: #fff;
-  border-color: #f8c8dc;
-}
-
-.btn-pastel:hover {
-  background-color: #f165b4;
-  border-color: #e0a9c8;
-}
-
-.navbar-brand {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #d26a8d !important;
-}
-
-.nav-link {
-  color: #333 !important;
-  font-weight: 500;
-  transition: all 0.3s ease-in-out;
-}
-
-.nav-link:hover {
-  color: #d26a8d !important;
-  text-decoration: underline;
-}
 
 /* Media query para dispositivos móviles */
 @media (max-width: 768px) {
@@ -119,15 +63,6 @@ body {
   display: block;
 }
 
-.btn-pastel {
-  background-color: #f3cce3;
-  color: #5a3e57;
-  border: none;
-}
-
-.btn-pastel:hover {
-  background-color: #eab6d2;
-}
 
 footer a.text-white:hover {
   color: #080808;
