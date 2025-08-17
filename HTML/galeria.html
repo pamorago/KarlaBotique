@@ -155,97 +155,133 @@
     </div>
 
     <!-- Modal para Contacto -->
-    <div
-      class="modal fade"
-      id="modalContacto"
-      tabindex="-1"
-      aria-labelledby="modalContactoLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content bg-light">
+    <div class="modal fade" id="modalContacto" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="modalContactoLabel">
-              Información de Contacto
-            </h5>
+            <h5 class="modal-title">Confirmar compra</h5>
             <button
               type="button"
               class="btn-close"
               data-bs-dismiss="modal"
-              aria-label="Cerrar"
             ></button>
           </div>
           <div class="modal-body">
-            <form id="formularioContacto" class="needs-validation" novalidate>
-              <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre completo</label>
-                <input type="text" class="form-control" id="nombre" required />
-                <div class="invalid-feedback">Por favor ingrese su nombre.</div>
+            <!-- Resumen -->
+            <table class="table table-sm">
+              <tbody id="resumen-items"></tbody>
+              <tfoot>
+                <tr>
+                  <td class="fw-bold text-end">Total:</td>
+                  <td id="resumen-total" class="fw-bold"></td>
+                </tr>
+              </tfoot>
+            </table>
+
+            <!-- Formulario -->
+            <form id="formContacto">
+              <input type="hidden" id="compra_json" name="compra_json" />
+              <input type="hidden" id="compra_resumen" name="compra_resumen" />
+              <input type="hidden" id="compra_total" name="compra_total" />
+              <input type="hidden" id="compra_items" name="compra_items" />
+              <!-- aquí tus campos de nombre, correo, teléfono, etc. -->
+              <div class="modal-body">
+                <form id="formContacto" class="needs-validation" novalidate>
+                  <div class="mb-3">
+                    <label for="nombre" class="form-label"
+                      >Nombre completo</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nombre"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Por favor ingrese su nombre.
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label"
+                      >Correo electrónico</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Por favor ingrese un correo electrónico válido.
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="telefono"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Por favor ingrese su número de teléfono.
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="direccion" class="form-label"
+                      >Dirección de envío</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="direccion"
+                      rows="3"
+                      required
+                    ></textarea>
+                    <div class="invalid-feedback">
+                      Por favor ingrese su dirección de envío.
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <h6>Resumen de la compra</h6>
+                    <div id="resumen-compra" class="table-responsive">
+                      <table class="table table-sm">
+                        <tbody id="resumen-items"></tbody>
+                        <tfoot>
+                          <tr>
+                            <td class="text-end align-content-center fw-bold">
+                              Total a pagar:
+                            </td>
+                            <td id="resumen-total" class="fw-bold">
+                              ₡9&nbsp;500
+                            </td>
+                          </tr>
+                        </tfoot>
+                      </table>
+                    </div>
+                  </div>
+                </form>
               </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Correo electrónico</label>
-                <input type="email" class="form-control" id="email" required />
-                <div class="invalid-feedback">
-                  Por favor ingrese un correo electrónico válido.
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="telefono" class="form-label">Teléfono</label>
-                <input type="tel" class="form-control" id="telefono" required />
-                <div class="invalid-feedback">
-                  Por favor ingrese su número de teléfono.
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="direccion" class="form-label"
-                  >Dirección de envío</label
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
                 >
-                <textarea
-                  class="form-control"
-                  id="direccion"
-                  rows="3"
-                  required
-                ></textarea>
-                <div class="invalid-feedback">
-                  Por favor ingrese su dirección de envío.
-                </div>
-              </div>
-              <div class="mb-3">
-                <h6>Resumen de la compra</h6>
-                <div id="resumen-compra" class="table-responsive">
-                  <table class="table table-sm">
-                    <tbody id="resumen-items"></tbody>
-                    <tfoot>
-                      <tr>
-                        <td class="text-end fw-bold">Total a pagar:</td>
-                        <td id="resumen-total" class="fw-bold"></td>
-                      </tr>
-                    </tfoot>
-                  </table>
-                </div>
+                  Cancelar
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-pastel"
+                  onclick="enviarFormulario()"
+                >
+                  Confirmar Compra
+                </button>
               </div>
             </form>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Cancelar
-            </button>
-            <button
-              type="button"
-              class="btn btn-pastel"
-              onclick="enviarFormulario()"
-            >
-              Confirmar Compra
-            </button>
           </div>
         </div>
       </div>
     </div>
-
     <!-- Footer -->
     <footer class="bg-pink text-black text-center p-4 mt-3">
       <p>&copy; 2025 KarlaBotique - Todos los derechos reservados.</p>
@@ -258,8 +294,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="../JS/carrito.js"></script>
+    <script src="../JS/carrito.js" defer></script>
     <script src="../JS/imagenes.js"></script>
     <script src="../JS/redes.js"></script>
     <script>
