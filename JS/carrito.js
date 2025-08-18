@@ -11,7 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
   vaciarCarritoBtn.addEventListener("click", vaciarCarrito);
 
   document.addEventListener("click", (e) => {
-    if (!carritoFlotante.contains(e.target) && !pestanaCarrito.contains(e.target)) {
+    if (
+      !carritoFlotante.contains(e.target) &&
+      !pestanaCarrito.contains(e.target)
+    ) {
       carritoFlotante.classList.remove("activo");
     }
   });
@@ -26,18 +29,15 @@ document.addEventListener("DOMContentLoaded", () => {
     mostrarFormularioCompra();
   });
 });
-//agrgue 
+//agrgue
 // Formato moneda CR
 function formatoCRC(valor) {
-  return new Intl.NumberFormat('es-CR', {
-    style: 'currency',
-    currency: 'CRC',
-    minimumFractionDigits: 0
+  return new Intl.NumberFormat("es-CR", {
+    style: "currency",
+    currency: "CRC",
+    minimumFractionDigits: 0,
   }).format(valor);
 }
-
-
-
 
 // Funciones para el manejo del carrito
 function actualizarTotalCarrito(total, cantidadTotal) {
@@ -46,42 +46,6 @@ function actualizarTotalCarrito(total, cantidadTotal) {
   totalCarrito.textContent = `₡${total}`;
   contadorCarrito.textContent = cantidadTotal;
 }
-
-
-  // Mostrar el modal
-  const modalContacto = new bootstrap.Modal(
-    document.getElementById("modalContacto")
-  );
-  modalContacto.show();
-
-
-// // Función para procesar el envío del formulario
-// function enviarFormulario() {
-//   const form = document.getElementById("formularioContacto");
-
-//   if (form.checkValidity()) {
-//     // Obtener los datos del formulario
-//     const nombre = document.getElementById("nombre").value;
-//     const email = document.getElementById("email").value;
-//     const telefono = document.getElementById("telefono").value;
-//     const direccion = document.getElementById("direccion").value;
-
-//     // Aquí podrías enviar los datos a un servidor
-//     alert(
-//       `¡Gracias por tu compra, ${nombre}! Te contactaremos pronto al teléfono ${telefono} o al correo ${email} para coordinar la entrega a la dirección proporcionada.`
-//     );
-
-//     // Cerrar el modal y limpiar el carrito
-//     const modalContacto = bootstrap.Modal.getInstance(
-//       document.getElementById("modalContacto")
-//     );
-//     modalContacto.hide();
-//     vaciarCarrito();
-//   } else {
-//     // Mostrar validaciones del formulario
-//     form.classList.add("was-validated");
-//   }
-// }
 
 function agregarAlCarrito(id) {
   const prenda = window.prendasData.find((p) => p.id === id);
@@ -151,7 +115,7 @@ function vaciarCarrito() {
   actualizarCarritoUI();
 }
 
-//ajustes del carro al forms 
+//ajustes del carro al forms
 function mostrarFormularioCompra() {
   const resumenItems = document.getElementById("resumen-items");
   const resumenTotal = document.getElementById("resumen-total");
@@ -170,7 +134,9 @@ function mostrarFormularioCompra() {
     total += subtotal;
     return `
       <tr>
-        <td>${item.nombre} <small class="text-muted">x${item.cantidad}</small></td>
+        <td>${item.nombre} <small class="text-muted">x${
+      item.cantidad
+    }</small></td>
         <td class="text-end">${formatoCRC(subtotal)}</td>
       </tr>
     `;
@@ -184,14 +150,18 @@ function mostrarFormularioCompra() {
   inputTotal.value = total; // numérico
   inputItems.value = carrito.reduce((acc, item) => acc + item.cantidad, 0); // total de ítems
   inputResumen.value = carrito
-    .map((i) => `${i.cantidad} x ${i.nombre} = ${formatoCRC(i.precio * i.cantidad)}`)
+    .map(
+      (i) =>
+        `${i.cantidad} x ${i.nombre} = ${formatoCRC(i.precio * i.cantidad)}`
+    )
     .join(" | ");
 
   // Mostrar el modal
-  const modalContacto = new bootstrap.Modal(document.getElementById("modalContacto"));
+  const modalContacto = new bootstrap.Modal(
+    document.getElementById("modalContacto")
+  );
   modalContacto.show();
 }
-
 
 async function enviarFormulario() {
   const form = document.getElementById("formContacto");
@@ -202,7 +172,7 @@ async function enviarFormulario() {
   }
 
   // Estado del botón
-  const btn = document.querySelector('#modalContacto .btn.btn-pastel');
+  const btn = document.querySelector("#modalContacto .btn.btn-pastel");
   const originalText = btn.textContent;
   btn.disabled = true;
   btn.textContent = "Enviando...";
@@ -214,14 +184,18 @@ async function enviarFormulario() {
     const response = await fetch("https://formspree.io/f/mnnzrope", {
       method: "POST",
       body: formData,
-      headers: { Accept: "application/json" }
+      headers: { Accept: "application/json" },
     });
 
     if (!response.ok) throw new Error("No se pudo enviar el formulario");
 
     // Feedback
-    alert("¡Gracias por tu compra! Te contactaremos para coordinar la entrega.");
-    const modalContacto = bootstrap.Modal.getInstance(document.getElementById("modalContacto"));
+    alert(
+      "¡Gracias por tu compra! Te contactaremos para coordinar la entrega."
+    );
+    const modalContacto = bootstrap.Modal.getInstance(
+      document.getElementById("modalContacto")
+    );
     modalContacto.hide();
 
     // Limpieza
@@ -236,7 +210,7 @@ async function enviarFormulario() {
   }
 }
 
-//CON EL FS 
+//CON EL FS
 document.addEventListener("DOMContentLoaded", () => {
   const fsContacto = document.getElementById("fsContacto");
   const modalEl = document.getElementById("modalContacto");
@@ -247,12 +221,12 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Tu carrito está vacío.");
       return;
     }
-    fsContacto.disabled = false;      // habilita campos
-    mostrarFormularioCompra();        // muestra modal
+    fsContacto.disabled = false; // habilita campos
+    mostrarFormularioCompra(); // muestra modal
   });
 
   modalEl.addEventListener("hidden.bs.modal", () => {
-    fsContacto.disabled = true;       // vuelve a bloquear
+    fsContacto.disabled = true; // vuelve a bloquear
     document.getElementById("formContacto").reset();
   });
 });
