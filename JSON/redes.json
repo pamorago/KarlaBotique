@@ -1,19 +1,19 @@
 [
   {
     "nombre": "Instagram",
-    "url": "https://instagram.com/tu_pagina",
+    "url": "https://www.instagram.com/karlamairenac?igsh=cWs1eHo3eWxtZDk3",
     "icono": "../img/instagram.png",
     "alt": "Instagram"
   },
   {
     "nombre": "Facebook",
-    "url": "https://facebook.com/tu_pagina",
+    "url": "https://www.facebook.com/share/1BccXkQeto/?mibextid=wwXIfr",
     "icono": "../img/facebook.png",
     "alt": "Facebook"
   },
   {
     "nombre": "TikTok",
-    "url": "https://tiktok.com/@tu_pagina",
+    "url": "https://www.tiktok.com/@jaz..____?_t=ZM-8z04MpUeKnO&_r=1",
     "icono": "../img/tik-tok.png",
     "alt": "TikTok"
   }
