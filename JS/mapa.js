@@ -20,9 +20,9 @@ function initMap() {
   const directionsService = new google.maps.DirectionsService();
   const directionsRenderer = new google.maps.DirectionsRenderer({
     map: map,
-    suppressMarkers: true, // para que uses tus propios marcadores
+    suppressMarkers: true, 
     polylineOptions: {
-      strokeColor: "#6EC1E4", // azul pastel
+      strokeColor: "#6EC1E4", 
       strokeWeight: 5
     }
   });
