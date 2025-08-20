@@ -2,13 +2,13 @@ function initMap() {
   // 📍 Coordenadas de tu ubicación fija
   const lugarFijo = { lat: 10.020843, lng: -84.223928 };
 
-  // 🗺 Crear el mapa centrado en el lugar fijo
+  // Crear el mapa centrado en el lugar fijo
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 16,
     center: lugarFijo
   });
 
-  // 📌 Marcador del lugar fijo (rosa pastel)
+  //  Marcador del lugar fijo 
   const marcadorLugarFijo = new google.maps.Marker({
     position: lugarFijo,
     map: map,
@@ -16,7 +16,7 @@ function initMap() {
     icon: "http://maps.google.com/mapfiles/ms/icons/pink-dot.png"
   });
 
-  // 🚦 Servicios para rutas
+  //Servicios para rutas
   const directionsService = new google.maps.DirectionsService();
   const directionsRenderer = new google.maps.DirectionsRenderer({
     map: map,
@@ -27,7 +27,7 @@ function initMap() {
     }
   });
 
-  // 📡 Obtener ubicación del usuario
+  // Obtener ubicación del usuario
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
       (position) => {
@@ -44,7 +44,7 @@ function initMap() {
           icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
         });
 
-        // 🚗 Solicitar ruta por carretera
+        // Solicitar ruta por carretera
         directionsService.route(
           {
             origin: ubicacionUsuario,
